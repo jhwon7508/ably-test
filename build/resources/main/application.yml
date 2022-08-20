@@ -1,0 +1,26 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8070
+
+datasource:
+  driver-class-name: org.h2.Driver
+  url: jdbc:h2:mem:732d63bc-dc8e-42e7-a909-88e894c7b8d9
+  username: sa
+  password:
+jpa:
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  show-sql: true
+  hibernate:
+    ddl-auto: create
+  output:
+    ansi:
+      enabled: always
+logging:
+  level:
+    org.hibernate.type: trace
